@@ -1,0 +1,13 @@
+//2. What is OOP? List OOP concepts
+Object-Oriented Programming (OOP) is a programming paradigm that uses “objects” to design applications and software. An object is an instance of a class and it can contain both data (attributes) and functions (methods). The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function1.
+
+The key concepts of OOP in C++ are:
+
+Class: A blueprint for creating objects. A class encapsulates data for the object1.
+Object: An instance of a class. When a class is defined, no memory is allocated but when it is instantiated (i.e., an object is created) memory is allocated1.
+Inheritance: A process in which one object acquires the properties of another. With the use of inheritance, information is made manageable in a hierarchical order2.
+Polymorphism: A concept by which we can perform a single action in different ways. It provides an ability to override the behavior of the base class into the derived class2.
+Abstraction: Hiding the internal details and showing only the functionality. Abstraction separates code into interface and implementation1.
+Encapsulation: Binding the data with the code that manipulates it. It keeps the data and the code safe from external interference1.
+Dynamic Binding: Code execution is not known until the program runs2.
+Message Passing: Objects communicate with each other by sending and receiving information to each other1

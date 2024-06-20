@@ -1,0 +1,36 @@
+18. Write a SQL statement that displays all the information about all salespeople
+ create table salespeople( Salesman_id int primary key, 
+                            name varchar(100), 
+                            city varchar(100),
+                            commission int
+                         );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> insert into salespeople values(5001,'James Hoog', 'New York',0.15);
+Query OK, 1 row affected, 1 warning (0.02 sec)
+
+mysql> insert into salespeople values(5002,'Nail knite', 'Paris',0.13);
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> insert into salespeople values(5005,'Pit Alex', 'London',0.11);
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> insert into salespeople values(5006,'Mc Lyon', 'Paris',0.14);
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> insert into salespeople values(5007,'Paul Adam', 'Rome',0.13);
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> insert into salespeople values(5003,'Lauson Hen', 'Sane jose',0.12);
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
++-------------+------------+-----------+------------+
+| Salesman_id | name       | city      | commission |
++-------------+------------+-----------+------------+
+|        5001 | James Hoog | New York  |        0.15|
+|        5002 | Nail knite | Paris     |        0.13|
+|        5003 | Lauson Hen | Sane jose |        0.11|
+|        5005 | Pit Alex   | London    |        0.14|
+|        5006 | Mc Lyon    | Paris     |        0.13|
+|        5007 | Paul Adam  | Rome      |        0.12|
++-------------+------------+-----------+------------+

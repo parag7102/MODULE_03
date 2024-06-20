@@ -1,0 +1,66 @@
+1. Create Table Name : Student and Exam
+mysql> create table student(Roll_No int primary key,Name varchar(20), Branch varchar(50));
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> insert into student values(1,'Jay','Computer Science');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(2,'Shuhani','Eletronic and Com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(3,'Kriti','Eletronic and Com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from student;
++---------+---------+-------------------+
+| Roll_No | Name    | Branch            |
++---------+---------+-------------------+
+|       1 | Jay     | Computer Science  |
+|       2 | Shuhani | Eletronic and Com |
+|       3 | Kriti   | Eletronic and Com |
++---------+---------+-------------------+
+3 rows in set (0.00 sec)
+
+mysql> CREATE TABLE Exam (
+    ->   Roll_No INT,
+    ->   S_code VARCHAR(10),
+    ->   Marks INT,
+    ->   P_code VARCHAR(10),
+    ->   PRIMARY KEY (Roll_No, S_code),
+    ->   FOREIGN KEY (Roll_No) REFERENCES Student(Roll_No)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> SELECT * FROM EXAM;
+Empty set (0.00 sec)
+
+mysql> insert into Exam values(1,'CS11',50,'CS');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Exam values(1,'CS12',60,'CS');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Exam values(2,'EC101',66,'EC');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Exam values(2,'EC102',70,'EC');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Exam values(3,'EC101',45,'EC');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Exam values(3,'EC102',50,'EC');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM EXAM;
++---------+--------+-------+--------+
+| Roll_No | S_code | Marks | P_code |
++---------+--------+-------+--------+
+|       1 | CS11   |    50 | CS     |
+|       1 | CS12   |    60 | CS     |
+|       2 | EC101  |    66 | EC     |
+|       2 | EC102  |    70 | EC     |
+|       3 | EC101  |    45 | EC     |
+|       3 | EC102  |    50 | EC     |
++---------+--------+-------+--------+
+6 rows in set (0.01 sec)

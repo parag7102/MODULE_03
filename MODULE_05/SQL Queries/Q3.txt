@@ -1,0 +1,10 @@
+3. Get First_Name from employee table using Tom name “Employee Name”.
+mysql> SELECT FirstName
+    -> FROM Employees
+    -> WHERE FirstName = 'Tom';
++-----------+
+| FirstName |
++-----------+
+| Tom       |
++-----------+
+1 row in set (0.00 sec)

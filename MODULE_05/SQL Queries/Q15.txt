@@ -1,0 +1,11 @@
+15. All salespeople either in Barcelona or in London
+> SELECT SNAME
+    -> FROM SALESPERSON
+    -> WHERE CITY IN ('Barcelona', 'London');
++--------+
+| SNAME  |
++--------+
+| Peel   |
+| Rafkin |
++--------+
+2 rows in set (0.00 sec)

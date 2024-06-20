@@ -1,0 +1,9 @@
+12. Retrieve the below data from above table
+
+mysql> SELECT * FROM SALESPERSON WHERE CITY = 'London';
++------+-------+--------+-------+
+| SNo  | SNAME | CITY   | COMM  |
++------+-------+--------+-------+
+| 1001 | Peel  | London | 12.00 |
++------+-------+--------+-------+
+1 row in set (0.12 sec)

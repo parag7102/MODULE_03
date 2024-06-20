@@ -1,0 +1,42 @@
+create table SalesPerson (SNo int primary key,
+             SName varchar(100),
+             City varchar(50),
+             Comm int 
+             );
+
+mysql> insert into SalesPerson values(1001,'Peel','London',12);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into SalesPerson values(1002,'serres','San Jose',13);
+Query OK, 1 row affected (0.01 sec)
+
+insert into salesperson values(1007,'Rafkin','Barcelona',15);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into salesperson values(1003,'Axelrod','New york',1);
+Query OK, 1 row affected (0.01 sec)
+
+CREATE TABLE Customer (
+    CNo int NOT NULL PRIMARY KEY,
+    CName nvarchar(50) NOT NULL,
+    City nvarchar(50) NOT NULL,
+    Rating int NOT NULL,
+    SNo int,
+    FOREIGN KEY (SNo) REFERENCES Salesperson(SNo)
+);
+
+mysql> insert into customer values(201,'Hoffman','London',100,1001);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into customer values(202,'Giovanne','ROe',200,1003);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into customer values(203,'Liu','San Jose',300,1002);
+Query OK, 1 row affected (0.01 sec)
+
+insert into customer values(204,'Grass','Barcelona',100,1002);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into customer values(206,'clemens','London',300,1007);
+Query OK, 1 row affected (0.01 sec)
+

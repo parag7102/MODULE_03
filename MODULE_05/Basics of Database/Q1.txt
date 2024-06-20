@@ -1,0 +1,26 @@
+1. What do you understand By Database
+A database is an organized collection of data stored and accessed electronically. It serves as a crucial tool used by organizations to store, retrieve, and manage information efficiently1. Here are some key points about databases:
+
+Definition: 
+A database is a structured repository for data that allows for rapid search, retrieval, modification, and deletion of information using a computer system2. It typically consists of tables, rows, and columns where data is organized in a way that facilitates efficient processing and querying.
+Components:
+Data: The actual information stored in the database, which can be anything from customer records to product inventory.
+Database Management System (DBMS): Software that manages the database, including tasks like data storage, retrieval, security, and optimization.
+Applications: 
+Software programs that interact with the database, such as web applications, mobile apps, or reporting tools.
+Types of Databases:
+Relational Databases: 
+These use a structured format with tables, rows, and columns. They rely on a query language called Structured Query Language (SQL) for data manipulation and retrieval.
+Object-Oriented Databases:
+ These store data in objects and support complex relationships between them.
+NoSQL Databases:
+ Designed for unstructured or semi-structured data, they offer flexibility and scalability for applications like social media and big data analytics.
+Cloud Databases:
+ Hosted on cloud platforms, these provide scalability, reliability, and accessibility from anywhere.
+Databases vs. Spreadsheets:
+Data Storage and Manipulation:
+ Databases are designed to handle large amounts of organized information, while spreadsheets are more suitable for individual users or small-scale data manipulation.
+Access Control:
+ Databases allow multiple users to securely access and query data, whereas spreadsheets were originally designed for single users.
+Data Volume: Databases can store massive amounts of data, while spreadsheets have limitations.
+Data Volume: Databases can store massive amounts of data, while spreadsheets have limitations.

@@ -1,0 +1,19 @@
+5. What do you understand By Data Redundancy?
+Data redundancy refers to the practice of storing the same data in multiple places within a database or across different databases. While some level of redundancy can be useful for data recovery and fault tolerance, excessive redundancy can lead to inefficiencies and increased storage requirements.
+
+Here are some key points about data redundancy:
+
+Types of Data Redundancy:
+Horizontal Redundancy: In this type, identical data is stored in different rows of the same table. For example, if you have a table of customer records, and the same customer information (such as name, address, and phone number) appears in multiple rows, it is considered horizontal redundancy.
+Vertical Redundancy: In vertical redundancy, the same data is stored in different columns of the same table. For instance, if you have a table with columns for “first name” and “last name,” and both columns contain the same information, it is vertical redundancy.
+Cross-Redundancy: This occurs when the same data is stored in different tables across the database. For example, if you have a “products” table and a separate “inventory” table, and both tables store the same product information, it is cross-redundancy.
+Advantages of Data Redundancy:
+Improved Fault Tolerance: Redundancy allows data to be retrieved even if one copy is lost or corrupted. This is crucial for maintaining system availability.
+Faster Retrieval: Having redundant copies of data can speed up query performance, especially in distributed systems.
+Disadvantages of Data Redundancy:
+Increased Storage Costs: Storing redundant data requires additional storage space, which can be expensive.
+Data Inconsistency: If redundant copies of data are not synchronized properly, inconsistencies can arise. For example, if a customer changes their address in one place but not in another, it leads to data inconsistency.
+Complex Maintenance: Managing redundant data can be challenging. Updates, deletions, and inserts must be carefully coordinated to avoid inconsistencies.
+Normalization and Reducing Redundancy:
+Normalization is the process of organizing data in a relational database to minimize redundancy and improve data integrity. It involves breaking down large tables into smaller, related tables and establishing relationships between them.
+By applying normalization rules (such as First Normal Form, Second Normal Form, etc.), you can reduce redundancy and improve data consistency.

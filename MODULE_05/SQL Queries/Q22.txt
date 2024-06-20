@@ -1,0 +1,21 @@
+From the following table, write a SQL query to display
+     the pro_name as 'Item Name' and pro_priceas 'Price in Rs.'
+
+     
+mysql> SELECT PRO_NAME AS 'Item Name', PRO_PRICE AS 'Price in Rs.'
+    -> FROM item_mast;
++------------------+--------------+
+| Item Name        | Price in Rs. |
++------------------+--------------+
+| Mother Board     |     32000.00 |
+| Key Board        |       450.00 |
+| ZIP Drive        |       250.00 |
+| Speaker          |       550.00 |
+| Moniter          |      5000.00 |
+| DVD Drive        |       900.00 |
+| CD Drive         |       800.00 |
+| Printer          |      2600.00 |
+| Refile Cartridge |       350.00 |
+| Mouse            |       250.00 |
++------------------+--------------+
+10 rows in set (0.01 sec)

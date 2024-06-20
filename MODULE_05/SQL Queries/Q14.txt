@@ -1,0 +1,9 @@
+14. Names and cities of all salespeople in London with commission above 0.12
+
+SELECT SNAME, CITY
+FROM SALESPERSON
+WHERE CITY = 'London' AND COMM > 0.12;
+ SNAME | CITY   | COMM  |
+-------+--------+-------+
+| Peel  | London | 12.00 |
+--------+--------+-------+

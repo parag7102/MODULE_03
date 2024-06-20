@@ -1,0 +1,45 @@
+3. What is Difference between DBMS and RDBMS?
+Certainly! Let’s explore the key differences between Database Management Systems (DBMS) and Relational Database Management Systems (RDBMS):
+
+Data Storage:
+DBMS: Stores data as files.
+RDBMS: Stores data in tabular form (tables).
+Data Access:
+DBMS: Requires accessing data elements individually.
+RDBMS: Allows accessing multiple data elements simultaneously.
+Data Relationships:
+DBMS: No inherent relationship between data.
+RDBMS: Data is stored in related tables.
+Normalization:
+DBMS: Does not support normalization.
+RDBMS: Supports normalization to reduce redundancy and maintain database integrity.
+Distributed Database:
+DBMS: Does not support distributed databases.
+RDBMS: Supports distributed databases.
+Data Structure:
+DBMS: Uses navigational or hierarchical structures.
+RDBMS: Utilizes a tabular structure with column headers and corresponding values.
+Data Handling:
+DBMS: Deals with small quantities of data.
+RDBMS: Handles large amounts of data.
+Data Redundancy:
+DBMS: Common due to lack of keys and indexes.
+RDBMS: Keys and indexes prevent data redundancy.
+Codd Rules:
+DBMS: Does not satisfy all Codd rules.
+RDBMS: Satisfies all 12 Codd rules.
+Security:
+DBMS: Provides less security.
+RDBMS: Offers multiple levels of data security.
+User Support:
+DBMS: Supports a single user.
+RDBMS: Supports multiple users.
+Data Retrieval Speed:
+DBMS: Slower for large data.
+RDBMS: Faster due to the relational approach.
+Software and Hardware Requirements:
+DBMS: Requires lower software and hardware resources.
+RDBMS: Demands higher software and hardware resources.
+Examples:
+DBMS: XML, Windows Registry, FoxPro, dBASE III Plus, etc.
+RDBMS: MySQL, PostgreSQL, SQL Server, Oracle, Microsoft Access, etc.

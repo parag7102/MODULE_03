@@ -1,0 +1,24 @@
+From the following table, write a SQL query to find the items whose prices 
+            are higher than or equal to $250. Order the result by product price in descending,
+            then product name in ascending. Return pro_name and pro_price.
+
+
+mysql> SELECT PRO_NAME, PRO_PRICE
+    -> FROM item_mast
+    -> WHERE PRO_PRICE >= 250
+    -> ORDER BY PRO_PRICE DESC, PRO_NAME ASC;
++------------------+-----------+
+| PRO_NAME         | PRO_PRICE |
++------------------+-----------+
+| Mother Board     |  32000.00 |
+| Moniter          |   5000.00 |
+| Printer          |   2600.00 |
+| DVD Drive        |    900.00 |
+| CD Drive         |    800.00 |
+| Speaker          |    550.00 |
+| Key Board        |    450.00 |
+| Refile Cartridge |    350.00 |
+| Mouse            |    250.00 |
+| ZIP Drive        |    250.00 |
++------------------+-----------+
+10 rows in set (0.01 sec)

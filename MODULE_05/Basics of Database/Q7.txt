@@ -1,0 +1,26 @@
+7. What is DML Compiler in SQL?
+Certainly! Let’s delve into the concept of DML (Data Manipulation Language) and explore its significance in SQL.
+
+1.DML Overview:
+DML deals with data manipulation within a database. It encompasses the most common SQL statements used to interact with data.
+These statements allow you to store, modify, retrieve, delete, and update data in the database.
+2.Common DML Commands:
+Here are the essential DML commands:
+SELECT: Retrieves data from one or more tables based on specified conditions.
+INSERT: Adds new data into a table.
+UPDATE: Modifies existing data within a table.
+DELETE: Removes records from a table.
+MERGE: Performs an UPSERT operation (i.e., insert or update) based on certain conditions.
+CALL: Invokes a PL/SQL or Java subprogram.
+EXPLAIN PLAN: Provides an interpretation of the data access path for query optimization.
+LOCK TABLE: Used for concurrency control.
+3.Key Points about DML:
+DML statements are not auto-committed, meaning changes can be rolled back if necessary.
+They directly impact the data stored in the database.
+4.Example Usage:
+Suppose you want to add a new employee record to an “Employees” table:
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Department)
+VALUES (101, 'Parag', 'Makwana', 'BCA');
+5.Why DML Matters:
+DML is fundamental for applications that interact with databases. It allows developers to manipulate data dynamically.
+Whether you’re building a web application, managing inventory, or analyzing customer data, DML plays a crucial role.

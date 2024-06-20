@@ -1,0 +1,43 @@
+9. What is save Point? How to create a save Point write a Query?
+Certainly! Let’s dive into the concept of SAVEPOINT in SQL and explore how to create and use it.
+
+What is a SAVEPOINT?
+A SAVEPOINT is a mechanism within a transaction that allows you to create a point to which you can later roll back.
+It’s particularly useful when you want to implement partial rollbacks in case of errors or exceptional conditions within a transaction.
+Why Use SAVEPOINT?
+Nested Transactions: SAVEPOINT allows you to create nested transactions within a larger transaction. This is helpful when you have multiple steps, and you want to handle errors at a more fine-grained level.
+Partial Rollback: It provides the ability to roll back to a specific point within a transaction without affecting the entire transaction. If only a portion of the transaction encounters an error, you can revert to a known good state.
+Error Handling: SAVEPOINT can be used for better error handling. If an error occurs, you can roll back to a savepoint, handle the error, and possibly continue or retry the transaction.
+Syntax for Creating a SAVEPOINT:
+The basic syntax for creating a SAVEPOINT is as follows:
+SAVEPOINT savepoint_name;
+Here, savepoint_name is the name you assign to the savepoint. You can choose any valid identifier as the savepoint name.
+Example: 
+Let’s say we’re working with a transaction involving an “Orders” table. Here’s how you can use SAVEPOINT:
+START TRANSACTION; -- Begin the transaction
+
+-- Perform some SQL operations
+INSERT INTO Orders (order_id, amount) VALUES (101, 500);
+INSERT INTO Orders (order_id, amount) VALUES (102, 700);
+
+SAVEPOINT my_savepoint; -- Create a savepoint
+
+-- Perform more SQL operations
+UPDATE Orders SET amount = 600 WHERE order_id = 101;
+
+-- If an error occurs, you can roll back to the savepoint
+ROLLBACK TO my_savepoint;
+
+-- Continue with the transaction or commit
+COMMIT;
+In this example:
+We start a transaction.
+Insert two orders.
+Create a savepoint called “my_savepoint.”
+Update the amount for order 101.
+If an error occurs, we can roll back to the savepoint, undoing the changes made after it.
+Notes:
+SAVEPOINT is generally used in conjunction with the ROLLBACK TO statement.
+If you want to roll back the entire transaction, you can use ROLLBACK without specifying a savepoint.
+Savepoints are only applicable within the scope of a transaction.
+Once the transaction is committed, the savepoints are automatically released.

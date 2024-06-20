@@ -1,0 +1,18 @@
+5. Get all employee details from the employee table order by First_Name
+    Ascending and Salary descending?
+mysql> SELECT *
+    -> FROM employees
+    -> ORDER BY FirstName ASC, Salary DESC;
++------------+-----------+----------+---------+-------------+------------+
+| EmployeeID | FirstName | LastName | Salary  | JoiningDate | Department |
++------------+-----------+----------+---------+-------------+------------+
+|          5 | Jerry     | Pinto    |  650000 | 2013-02-01  | Insurance  |
+|          1 | John      | Abraham  | 1000000 | 2013-01-01  | Banking    |
+|          2 | Michael   | Clarke   |  800000 | 2013-01-01  | Insurance  |
+|          6 | Philip    | Methew   |  750000 | 2013-01-01  | Services   |
+|          3 | Roy       | Thomas   |  700000 | 2013-02-01  | Banking    |
+|          7 |TestName1  | 123      |  650000 | 2013-01-01  | Services   |
+|          8 | TestName2 | Lname%   |  600000 | 2013-02-01  | Insurance  |
+|          4 | Tom       | Jose     |  600000 | 2013-02-01  | Insurance  |
++------------+-----------+----------+---------+-------------+------------+
+8 rows in set (0.01 sec)

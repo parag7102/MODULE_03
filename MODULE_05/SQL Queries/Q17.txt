@@ -1,0 +1,12 @@
+17. All customers excluding those with rating <= 100 unless they are located in Rome
+mysql> SELECT CNAME, CITY, RATING
+    -> FROM CUSTOMER
+    -> WHERE NOT (RATING <= 100 AND CITY <> 'Rome');
++----------+----------+--------+
+| CNAME    | CITY     | RATING |
++----------+----------+--------+
+| Giovanne | Roe      |    200 |
+| Liu      | San Jose |    300 |
+| clemens  | London   |    300 |
++----------+----------+--------+
+3 rows in set (0.01 sec)

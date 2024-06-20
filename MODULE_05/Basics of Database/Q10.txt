@@ -1,0 +1,38 @@
+10. What is trigger and how to create a Trigger in SQL?
+Certainly! Let’s dive into the world of SQL triggers. A trigger is a special type of stored procedure that automatically runs when specific events occur in a database. These events can include data modifications (such as INSERT, UPDATE, or DELETE statements), changes in table structure, or even user logins to a SQL Server instance.
+
+Here are the key points about triggers:
+
+Types of Triggers:
+DML (Data Modification Language) Triggers: These fire in response to data modification statements (INSERT, UPDATE, DELETE) on a table or view. They are the most commonly used triggers.
+DDL (Data Definition Language) Triggers: These fire upon events that change the database structure (e.g., creating, modifying, or dropping a table) or certain server-related events (like security changes or statistics updates).
+Logon Triggers: These fire when a user’s session is being established (e.g., when a user logs in).
+Characteristics of Triggers:
+Triggers cannot be manually executed by users.
+They cannot receive parameters.
+You cannot commit or rollback a transaction inside a trigger.
+DML Trigger Types:
+FOR or AFTER [INSERT, UPDATE, DELETE]: These triggers execute after the firing statement completes.
+INSTEAD OF [INSERT, UPDATE, DELETE]: These triggers execute instead of the firing statement, allowing you to replace the original action.
+Creating a Trigger:
+The syntax for creating a trigger in SQL Server is as follows:
+CREATE TRIGGER [schema_name.]trigger_name
+ON {table | view}
+{FOR | AFTER | INSTEAD OF}
+{[INSERT], [UPDATE], [DELETE]}
+AS
+BEGIN
+    -- SQL statements to be executed
+END;
+You can use the INSERTED and DELETED virtual tables within the trigger to capture data before and after the event occurs.
+Example: Logging Changes in a Table: Let’s create a trigger that logs any changes made to a specific table named Customers:
+CREATE TRIGGER [dbo].[AuditChanges]
+ON [dbo].[Customers]
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    -- Log changes (you can customize this logic)
+    -- For example, insert into an audit table
+    INSERT INTO [dbo].[AuditTable] (ChangeType, ChangeDate)
+    VALUES ('INSERT/UPDATE/DELETE', GETDATE());
+END;

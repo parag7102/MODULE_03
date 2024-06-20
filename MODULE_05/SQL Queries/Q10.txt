@@ -1,0 +1,11 @@
+10. Create After Insert trigger on Employee table which insert records in viewtable
+ create trigger t6 after insert on employees for each row
+    -> insert into view_table values(new.EmployeeID,new.FirstName,new.LastName,new.salary,new.JoiningDate,new.Department);
+    -> end;
+    -> end //
+Query OK, 0 rows affected (0.02 sec)
++-------------+------------+-----------+--------+--------------+------------+
+| Employee_id | First_name | Last_name | Salary | Joining_date | Department |
++-------------+------------+-----------+--------+--------------+------------+
+|           9 | Parag      | Makwana   |  85000 | 2002-01-07   | Banking    |
++-------------+------------+-----------+--------+--------------+------------+

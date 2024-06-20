@@ -1,0 +1,11 @@
+6. Get employee details from employee table whose first name contains ‘J’.
+mysql> SELECT *
+    -> FROM employees
+    -> WHERE FirstName LIKE '%J%';
++------------+-----------+----------+---------+-------------+------------+
+| EmployeeID | FirstName | LastName | Salary  | JoiningDate | Department |
++------------+-----------+----------+---------+-------------+------------+
+|          1 | John      | Abraham  | 1000000 | 2013-01-01  | Banking    |
+|          5 | Jerry     | Pinto    |  650000 | 2013-02-01  | Insurance  |
++------------+-----------+----------+---------+-------------+------------+
+2 rows in set (0.00 sec)

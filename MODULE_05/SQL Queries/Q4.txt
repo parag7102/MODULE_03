@@ -1,0 +1,16 @@
+4. Get FIRST_NAME, Joining Date, and Salary from employee table.
+mysql> SELECT FirstName, JoiningDate, Salary
+    -> FROM employees;
++-----------+-------------+---------+
+| FirstName | JoiningDate | Salary  |
++-----------+-------------+---------+
+| John      | 2013-01-01  | 1000000 |
+| Michael   | 2013-01-01  |  800000 |
+| Roy       | 2013-02-01  |  700000 |
+| Tom       | 2013-02-01  |  600000 |
+| Jerry     | 2013-02-01  |  650000 |
+| Philip    | 2013-01-01  |  750000 |
+|TestName1  | 2013-01-01  |  650000 |
+| TestName2 | 2013-02-01  |  600000 |
++-----------+-------------+---------+
+8 rows in set (0.00 sec)

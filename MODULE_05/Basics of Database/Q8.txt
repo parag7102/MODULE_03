@@ -1,0 +1,49 @@
+8. What is SQL Key Constraints writing an Example of SQL Key Constraints
+Certainly! SQL key constraints play a vital role in maintaining data accuracy and integrity within relational databases. Let’s explore the different types of key constraints and provide examples for each:
+
+1. NOT NULL Constraint:
+The NOT NULL constraint ensures that a column cannot store NULL values.
+Example:
+CREATE TABLE Colleges (
+    college_id INT NOT NULL,
+    college_code VARCHAR(20) NOT NULL,
+    college_name VARCHAR(50)
+);
+2. UNIQUE Constraint:
+The UNIQUE constraint ensures that all values in a column are unique.
+Example:
+CREATE TABLE Colleges (
+    college_id INT NOT NULL UNIQUE,
+    college_code VARCHAR(20) UNIQUE,
+    college_name VARCHAR(50)
+);
+3. PRIMARY KEY Constraint:
+The PRIMARY KEY constraint combines the features of NOT NULL and UNIQUE. It uniquely identifies each row.
+Example:
+CREATE TABLE Colleges (
+    college_id INT PRIMARY KEY,
+    college_code VARCHAR(20) NOT NULL,
+    college_name VARCHAR(50)
+);
+4. FOREIGN KEY Constraint:
+The FOREIGN KEY constraint references a record in another table.
+Example:
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT REFERENCES Customers(id)
+);
+5. CHECK Constraint:
+The CHECK constraint validates a condition before allowing values in a table.
+Example:
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    amount INT CHECK (amount >= 100)
+);
+6. DEFAULT Constraint:
+The DEFAULT constraint sets a default value if NULL is stored in a column.
+Example:
+CREATE TABLE College (
+    college_id INT PRIMARY KEY,
+    college_code VARCHAR(20),
+    -- Other columns...
+);

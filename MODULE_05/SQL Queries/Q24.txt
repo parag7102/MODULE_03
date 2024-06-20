@@ -1,0 +1,17 @@
+From the following table, write a SQL query to calculate average price
+                of the items for each company. Return average price and company code.
+
+mysql> SELECT AVG(PRO_PRICE) AS 'Average Price', PRO_COM
+    -> FROM item_mast
+    -> GROUP BY PRO_COM;
++---------------+---------+
+| Average Price | PRO_COM |
++---------------+---------+
+|  32000.000000 |      15 |
+|    500.000000 |      16 |
+|    250.000000 |      14 |
+|   5000.000000 |      11 |
+|    650.000000 |      12 |
+|   1475.000000 |      13 |
++---------------+---------+
+6 rows in set (0.01 sec)

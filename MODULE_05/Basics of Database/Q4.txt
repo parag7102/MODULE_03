@@ -1,0 +1,27 @@
+4. What is MF Cod Rule of RDBMS Systems?
+Certainly! Let’s delve into Codd’s Rules for Relational Database Management Systems (RDBMS). These rules were proposed by Dr. Edgar F. Codd, a pioneer in the field of relational databases. They define the characteristics and requirements that a system must meet to be considered a true RDBMS. Here are the key rules:
+
+The Information Rule:
+All information, whether user data or metadata, must be stored as values within cells of tables. In other words, everything in the database is organized in a tabular layout1.
+The Guaranteed Access Rule:
+Each data element (such as a specific value) should be logically accessible using a combination of the table name, primary key (row value), and attribute name (column value).
+Systematic Treatment of NULL Values:
+Null values (representing missing or unknown information) must be handled uniformly across the database.
+Active Online Catalog Rule:
+The database catalog, which contains metadata about the database (such as table definitions), should be stored and accessed using the same RDBMS.
+The Comprehensive Data Sublanguage Rule:
+An RDBMS should provide an easily understandable data manipulation language (DML) for defining, querying, and modifying data within the database.
+The View Updating Rule:
+All theoretically updatable views should also be updatable by the system.
+High-level Insert, Update, and Delete:
+The RDBMS should allow users to perform high-level insertions, updates, and deletions through single queries.
+Physical Data Independence:
+Application programs and activities should remain unaffected when changes are made to the physical storage structures or methods.
+Logical Data Independence:
+Application programs and activities should remain unaffected when changes are made to the logical structure of the data (e.g., adding or modifying tables).
+Integrity Independence:
+Integrity constraints (such as uniqueness or referential integrity) should be specified separately from application programs and automatically enforced by the database system.
+Distribution Independence:
+The distribution of data across multiple locations should be transparent to users, and the RDBMS should handle it seamlessly.
+Non-Subversion Rule:
+The system’s interface should not allow low-level access that could bypass security and integrity constraints.

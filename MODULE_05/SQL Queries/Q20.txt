@@ -1,0 +1,72 @@
+From the following table, write a SQL query to select a range of products 
+whose price is in the range Rs.200 to Rs.600. Begin and end values are included. 
+Return pro_id, pro_name, pro_price, and pro_com.
+
+mysql> CREATE TABLE item_mast (
+    ->     PRO_ID INT,
+    ->     PRO_NAME VARCHAR(255),
+    ->     PRO_PRICE DECIMAL(10, 2),
+    ->     PRO_COM INT
+    -> );
+
+
+mysql> insert into item_mast values(101,'Mother Board',32000.00,15);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into item_mast values(102,'Key Board',450.00,16);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into item_mast values(103,'ZIP Drive',250.00,14);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into item_mast values(104,'Speaker',550.00,16);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into item_mast values(105,'Moniter',5000.00,11);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into item_mast values(106,'DVD Drive',900.00,12);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into item_mast values(107,'CD Drive',800.00,12);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into item_mast values(108,'Printer',2600.00,13);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into item_mast values(109,'Refile Cartridge',350.00,13);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into item_mast values(110,'Mouse',250.00,12);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from item_mast;
++--------+------------------+-----------+---------+
+| PRO_ID | PRO_NAME         | PRO_PRICE | PRO_COM |
++--------+------------------+-----------+---------+
+|    101 | Mother Board     |  32000.00 |      15 |
+|    102 | Key Board        |    450.00 |      16 |
+|    103 | ZIP Drive        |    250.00 |      14 |
+|    104 | Speaker          |    550.00 |      16 |
+|    105 | Moniter          |   5000.00 |      11 |
+|    106 | DVD Drive        |    900.00 |      12 |
+|    107 | CD Drive         |    800.00 |      12 |
+|    108 | Printer          |   2600.00 |      13 |
+|    109 | Refile Cartridge |    350.00 |      13 |
+|    110 | Mouse            |    250.00 |      12 |
++--------+------------------+-----------+---------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT PRO_ID, PRO_NAME, PRO_PRICE, PRO_COM
+    -> FROM item_mast
+    -> WHERE PRO_PRICE BETWEEN 200 AND 600;
++--------+------------------+-----------+---------+
+| PRO_ID | PRO_NAME         | PRO_PRICE | PRO_COM |
++--------+------------------+-----------+---------+
+|    102 | Key Board        |    450.00 |      16 |
+|    103 | ZIP Drive        |    250.00 |      14 |
+|    104 | Speaker          |    550.00 |      16 |
+|    109 | Refile Cartridge |    350.00 |      13 |
+|    110 | Mouse            |    250.00 |      12 |
++--------+------------------+-----------+---------+
+5 rows in set (0.00 sec)
